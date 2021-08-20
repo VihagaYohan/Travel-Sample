@@ -39,31 +39,83 @@ body {
 }
 
 .logo {
-    height: 35px;
+  height: 35px;
 }
 
-.text-box{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform:translate(-50%,-50%);
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.heading-primary{
-    color:#fff;
-    text-transform: uppercase;
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
 }
 
-.heading-primary-main{
-    display: block;
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 35px;
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+
+  backface-visibility: hidden; /* read about this. need 
+  usefull to make animations smooth */
+
+  /* animation-name: moveInLeft;
+  animation-duration: 3s; */
+
+  animation: moveInLeft 1s ease-out;
+
+  /* animation-delay: 2s;
+  animation-iteration-count: 2; 
+  animation-timing-function: ease-in;*/
 }
 
-.heading-primary-sub{
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 17.4px;
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+
+  backface-visibility: hidden; /* read about this. need 
+  usefull to make animations smooth */
+
+  /* animation-name: moveInRight;
+  animation-duration: 3s; */
+
+  animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
