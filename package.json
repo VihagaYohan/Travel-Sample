@@ -1,0 +1,23 @@
+{
+  "name": "travel-sample",
+  "version": "1.0.0",
+  "description": "HTML & SASS project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass":"node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VihagaYohan/Travel-Sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VihagaYohan/Travel-Sample/issues"
+  },
+  "homepage": "https://github.com/VihagaYohan/Travel-Sample#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

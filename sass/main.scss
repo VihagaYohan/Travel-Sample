@@ -2,124 +2,169 @@
 light green #7dd56f 
 medium green #55c57a
 dark green #28b485*/
+
+$color-primary: #55c57a;
+$color-primary-light: #7dd56f;
+$color-primary-dark: #28b485;
+$color-gray-dark:#777;
+$color-white:#fff;
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
-  padding: 30px; }
+  color: $color-gray-dark;
+  padding: 30px;
+}
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(125, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../images/hero.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../images/hero.jpg);
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
+  position: relative;
+}
 
 .header__logo-box {
   position: absolute;
   top: 40px;
-  left: 40px; }
+  left: 40px;
+}
 
 .header__logo {
-  height: 35px; }
+  height: 35px;
+}
 
 .header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center; }
+  text-align: center;
+}
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+}
 
 .heading-primary--main {
   display: block;
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
-  backface-visibility: hidden;
-  /* read about this. need 
+
+  backface-visibility: hidden; /* read about this. need 
     usefull to make animations smooth */
+
   /* animation-name: moveInLeft;
     animation-duration: 3s; */
+
   animation: moveInLeft 1s ease-out;
+
   /* animation-delay: 2s;
     animation-iteration-count: 2; 
-    animation-timing-function: ease-in;*/ }
+    animation-timing-function: ease-in;*/
+}
 
 .heading-primary--sub {
   display: block;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
-  backface-visibility: hidden;
-  /* read about this. need 
+
+  backface-visibility: hidden; /* read about this. need 
     usefull to make animations smooth */
+
   /* animation-name: moveInRight;
     animation-duration: 3s; */
-  animation: moveInRight 1s ease-out; }
+
+  animation: moveInRight 1s ease-out;
+}
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px); }
+    transform: translateX(-100px);
+  }
+
   80% {
-    transform: translateX(10px); }
+    transform: translateX(10px);
+  }
+
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px); }
+    transform: translateX(100px);
+  }
+
   80% {
-    transform: translateX(-10px); }
+    transform: translateX(-10px);
+  }
+
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px); }
+    transform: translateY(30px);
+  }
+
   100% {
     opacity: 1;
-    transform: translateY(0); } }
+    transform: translateY(0);
+  }
+}
 
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
-  /* top-bottom and left-right */
+  padding: 15px 40px; /* top-bottom and left-right */
   display: inline-block;
   border-radius: 100px;
   transition: all 0.2s;
-  position: relative; }
+  position: relative;
+}
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 
 .btn--white {
-  background-color: #fff;
-  color: #777; }
+  background-color: $color-white;
+  color: $color-gray-dark;
+}
 
 .btn::after {
   content: "";
@@ -131,15 +176,19 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+}
 
 .btn--white::after {
-  background-color: #fff; }
+  background-color: $color-white;
+}
 
 .btn:hover::after {
   transform: scaleX(1.5) scaleY(1.6);
-  opacity: 0; }
+  opacity: 0;
+}
 
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+}
