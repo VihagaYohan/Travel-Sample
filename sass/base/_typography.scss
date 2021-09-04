@@ -1,0 +1,48 @@
+body{
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 30px;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  
+    &--main {
+      display: block;
+      font-size: 60px;
+      font-weight: 40px;
+      letter-spacing: 35px;
+  
+      backface-visibility: hidden; /* read about this. need 
+      usefull to make animations smooth */
+  
+      /* animation-name: moveInLeft;
+      animation-duration: 3s; */
+  
+      animation: moveInLeft 1s ease-out;
+  
+      /* animation-delay: 2s;
+      animation-iteration-count: 2; 
+      animation-timing-function: ease-in;*/
+    }
+  
+    &--sub {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 17.4px;
+  
+      backface-visibility: hidden; /* read about this. need 
+    usefull to make animations smooth */
+  
+      /* animation-name: moveInRight;
+    animation-duration: 3s; */
+  
+      animation: moveInRight 1s ease-out;
+    }
+  }
